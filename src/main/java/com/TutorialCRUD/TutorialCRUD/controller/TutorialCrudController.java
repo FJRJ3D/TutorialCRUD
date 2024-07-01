@@ -14,5 +14,7 @@ public class TutorialCrudController {
     @Autowired
     TutorialCrudService tutorialCrudService;
 
-
+    public editTutorial(){
+        return null;
+    }
 }
