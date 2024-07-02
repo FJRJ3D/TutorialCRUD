@@ -16,7 +16,9 @@ public class TutorialCrudService {
     public ArrayList<Tutorial> getAllTutorials(){
         return (ArrayList<Tutorial>) iTutorialCrudRepository.findAll();
     }
-   /* public editTutorial(){
-        return iTutorialCrudRepository.save()
-    }*/
+
+    public String editTutorial(int id){
+        iTutorialCrudRepository.existsById(id);
+        iTutorialCrudRepository.save()
+    }
 }

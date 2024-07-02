@@ -20,7 +20,9 @@ public class TutorialCrudController {
     public ArrayList<Tutorial> getAllTutorials(){
         return tutorialCrudService.getAllTutorials();
     }
-    /*public editTutorial(){
-        return null;
-    }*/
+
+    @PostMapping(path = "/tutorials/{id}")
+    public Tutorial editTutorial(@PathVariable int id){
+        return tutorialCrudService.editTutorial(id);
+    }
 }
