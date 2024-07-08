@@ -16,13 +16,8 @@ public class TutorialCrudController {
     @Autowired
     TutorialCrudService tutorialCrudService;
 
-    @GetMapping(path = "/tutorials")
-    public ArrayList<Tutorial> getAllTutorials(){
-        return tutorialCrudService.getAllTutorials();
-    }
-
-    @PostMapping(path = "/tutorials/{id}")
-    public Tutorial editTutorial(@PathVariable int id){
-        return tutorialCrudService.editTutorial(id);
+    @PutMapping(path = "/tutorials/{id}")
+    public Tutorial updateTutorial(@PathVariable int id, @RequestBody Tutorial tutorial) {
+        return tutorialCrudService.updateTutorial(tutorial, id);
     }
 }
