@@ -10,7 +10,8 @@ import org.springframework.web.bind.annotation.*;
 @RestController
 @RequestMapping("/api")
 @CrossOrigin(origins = "*")
-public class TutorialCrudController {
+
+    public class TutorialCrudController {
     @Autowired
     TutorialCrudService tutorialCrudService;
 
@@ -25,4 +26,9 @@ public class TutorialCrudController {
         boolean isRemoved = this.tutorialCrudService.deleteTask(id);
         return isRemoved ? "Task with id " + id + " was deleted successfully." : "Task with id " + id + " was not found.";
     }
+    @PostMapping (path = "/tutorials")
+    public Tutorial createTutorial(@RequestBody Tutorial newTutorial){
+        return tutorialCrudService.createTutorial(newTutorial);
+    }
+
 }

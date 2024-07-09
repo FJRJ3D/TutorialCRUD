@@ -29,4 +29,7 @@ public class TutorialCrudService {
         newTutorial.setDescription(tutorial.getDescription());
         return iTutorialCrudRepository.save(newTutorial);
     }
+    public Tutorial createTutorial(Tutorial newTutorial){
+        return iTutorialCrudRepository.save(newTutorial);
+    }
 }
