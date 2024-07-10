@@ -6,6 +6,8 @@ import com.TutorialCRUD.TutorialCRUD.service.TutorialCrudService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
 
+import java.util.ArrayList;
+
 
 @RestController
 @RequestMapping("/api")
@@ -30,5 +32,8 @@ import org.springframework.web.bind.annotation.*;
     public Tutorial createTutorial(@RequestBody Tutorial newTutorial){
         return tutorialCrudService.createTutorial(newTutorial);
     }
-
+    @GetMapping (path = "/tutorials")
+    public ArrayList<Tutorial> getAllTasks(){
+        return tutorialCrudService.getAllTutorials();
+    }
 }
