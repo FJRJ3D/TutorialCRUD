@@ -64,7 +64,14 @@ Implementation of inheritance, MVC, Dependency Injection, encapsulation to hide 
 
 ## PROJECT DIAGRAM
 
-![Flowchart](./images/image.png)
+![Flowchart](./images/image.PNG)
+
+<hr>
+
+<br>
+
+### KANBAN
+- https://trello.com/b/Plxv8nVo/tutorial-crud
 
 <hr>
 
