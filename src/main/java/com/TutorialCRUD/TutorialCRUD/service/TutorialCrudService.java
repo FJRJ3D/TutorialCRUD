@@ -3,8 +3,10 @@ package com.TutorialCRUD.TutorialCRUD.service;
 import com.TutorialCRUD.TutorialCRUD.model.Tutorial;
 import com.TutorialCRUD.TutorialCRUD.repository.ITutorialCrudRepository;
 import org.springframework.beans.factory.annotation.Autowired;
+
 import org.springframework.stereotype.Service;
 
+import java.util.ArrayList;
 import java.util.Optional;
 
 
@@ -31,5 +33,9 @@ public class TutorialCrudService {
     }
     public Tutorial createTutorial(Tutorial newTutorial){
         return iTutorialCrudRepository.save(newTutorial);
+    }
+
+    public ArrayList<Tutorial> getAllTutorials(){
+        return (ArrayList<Tutorial>) iTutorialCrudRepository.findAll();
     }
 }
